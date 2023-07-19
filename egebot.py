@@ -41,7 +41,7 @@ def vcurs(message):
         bot.send_message(message.chat.id, '✨Вот занятия  Летнего Курса ЕГЭ по цитологии, доступные тебе:)')
         bot.send_message(message.chat.id, '(Выбери нужное, в нем ты найдешь запись веба, скрипт и домашку к нему)', reply_markup=markup)
         bot.register_next_step_handler(message, zad)
-    elif message.text == 'Беседа Летнего Курса ОГЭ':
+    elif message.text == 'Беседа Летнего Курса ЕГЭ':
         markup = types.InlineKeyboardMarkup()
         btn1 = types.InlineKeyboardButton('Ссылка на беседу', url='https://t.me/+Dd9o9PDg-vs5ZWEy')
         markup.row(btn1)
@@ -71,7 +71,7 @@ def zad(message):
         btn = types.KeyboardButton('Выбрать другое занятие')
         markup.row(btn1, btn2)
         markups.row(btn)
-        bot.send_message(message.chat.id, f'Занятие 1 <b>«ВВЕДЕНИЕ В ЦИТОЛОГИЮ»</b> \n <i>Дата онлайн-занятия:21.07.2023</i> \n <i>Время: 10:00 мск</i> \n ( Запись появится после трансляции, а пока распечатай скрипт и насладись видосиком с Капибарами ) \n https://youtu.be/wcov8v0hrHY', reply_markup=markup)
+        bot.send_message(message.chat.id, f'Занятие 1 <b>«ВВЕДЕНИЕ В ЦИТОЛОГИЮ»</b> \n <i>Дата онлайн-занятия:21.07.2023</i> \n <i>Время: 10:00 мск</i> \n ( Запись появится после трансляции, а пока распечатай скрипт и насладись видосиком с Капибарами ) \n https://youtu.be/wcov8v0hrHY', reply_markup=markup, parse_mode="html")
         bot.send_message(message.chat.id, 'Смотри, учи, запоминай!', reply_markup=markups)
         bot.register_next_step_handler(message, hlp)
     elif message.text == 'Занятие 2':
@@ -82,7 +82,7 @@ def zad(message):
         btn = types.KeyboardButton('Выбрать другое занятие')
         markup.row(btn1, btn2)
         markups.row(btn)
-        bot.send_message(message.chat.id, f'Занятие 2 <b>«КЛЕТОЧНЫЙ ЦИКЛ.МИТОЗ»</b> \n <i>Дата онлайн-занятия:25.07.2023</i> \n <i>Время: 10:00 мск</i> \n ( Запись появится после трансляции, а пока распечатай скрипт и насладись видосиком с Капибарами ) \n https://youtu.be/wcov8v0hrHY', reply_markup=markup)
+        bot.send_message(message.chat.id, f'Занятие 2 <b>«КЛЕТОЧНЫЙ ЦИКЛ.МИТОЗ»</b> \n <i>Дата онлайн-занятия:25.07.2023</i> \n <i>Время: 10:00 мск</i> \n ( Запись появится после трансляции, а пока распечатай скрипт и насладись видосиком с Капибарами ) \n https://youtu.be/wcov8v0hrHY', reply_markup=markup, parse_mode="html")
         bot.send_message(message.chat.id, 'Смотри, учи, запоминай!', reply_markup=markups)
         bot.register_next_step_handler(message, hlp)
     elif message.text == 'Занятие 3':
@@ -93,7 +93,7 @@ def zad(message):
         btn = types.KeyboardButton('Выбрать другое занятие')
         markup.row(btn1, btn2)
         markups.row(btn)
-        bot.send_message(message.chat.id, f'Занятие 3 <b>«МЕЙОЗ.ГАМЕТОГЕНЕЗ»</b> \n <i>Дата онлайн-занятия:28.07.2023</i> \n <i>Время: 10:00 мск</i> \n ( Запись появится после трансляции, а пока распечатай скрипт и насладись видосиком с Капибарами ) \n https://youtu.be/wcov8v0hrHY', reply_markup=markup)
+        bot.send_message(message.chat.id, f'Занятие 3 <b>«МЕЙОЗ.ГАМЕТОГЕНЕЗ»</b> \n <i>Дата онлайн-занятия:28.07.2023</i> \n <i>Время: 10:00 мск</i> \n ( Запись появится после трансляции, а пока распечатай скрипт и насладись видосиком с Капибарами ) \n https://youtu.be/wcov8v0hrHY', reply_markup=markup, parse_mode="html")
         bot.send_message(message.chat.id, 'Смотри, учи, запоминай!', reply_markup=markups)
         bot.register_next_step_handler(message, hlp)
     elif message.text == 'Занятие 4':
@@ -104,7 +104,7 @@ def zad(message):
         btn = types.KeyboardButton('Выбрать другое занятие')
         markup.row(btn1, btn2)
         markups.row(btn)
-        bot.send_message(message.chat.id, f'Занятие 4 <b>«ЦИКЛЫ РАСТЕНИЙ»</b> \n <i>Дата онлайн-занятия:01.08.2023</i> \n <i>Время: 10:00 мск</i> \n ( Запись появится после трансляции, а пока распечатай скрипт и насладись видосиком с Капибарами ) \n https://youtu.be/wcov8v0hrHY', reply_markup=markup)
+        bot.send_message(message.chat.id, f'Занятие 4 <b>«ЦИКЛЫ РАСТЕНИЙ»</b> \n <i>Дата онлайн-занятия:01.08.2023</i> \n <i>Время: 10:00 мск</i> \n ( Запись появится после трансляции, а пока распечатай скрипт и насладись видосиком с Капибарами ) \n https://youtu.be/wcov8v0hrHY', reply_markup=markup, parse_mode="html")
         bot.send_message(message.chat.id, 'Смотри, учи, запоминай!', reply_markup=markups)
         bot.register_next_step_handler(message, hlp)
     else:
