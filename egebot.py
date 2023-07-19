@@ -6,7 +6,7 @@ bot = telebot.TeleBot('6301767993:AAHSZZhEXTQz3hVc_ymyO_OLxPVkpVbkU3w')
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    markup = types.ReplyKeyboardMarkup()
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     btn1 = types.KeyboardButton('Привет, CapyBot☀️')
     markup.row(btn1)
     bot.send_message(message.chat.id, f'Привет капибобрик, {message.from_user.first_name}!👋', reply_markup=markup)
@@ -14,9 +14,9 @@ def start(message):
 
 def nachalo(message):
     if message.text == 'Привет, CapyBot☀️':
-        markup = types.ReplyKeyboardMarkup()
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.KeyboardButton('Мой Курс❤️')
-        btn2 = types.KeyboardButton('Беседа Летнего Курса ОГЭ')
+        btn2 = types.KeyboardButton('Беседа Летнего Курса ЕГЭ')
         btn3 = types.KeyboardButton('Телеграм-канал Капибары')
         markup.row(btn1)
         markup.row(btn2)
@@ -29,11 +29,11 @@ def nachalo(message):
 
 def vcurs(message):
     if message.text == 'Мой Курс❤️':
-        markup = types.ReplyKeyboardMarkup()
-        btn1 = types.KeyboardButton('Занятие 1 «Введение Анатомию» (22.07.23)')
-        btn2 = types.KeyboardButton('Занятие 2 «Остеология.Миология.Синдесмология» (24.07.23)')
-        btn3 = types.KeyboardButton('Занятие 3 «Спланхнология» (26.07.23)')
-        btn4 = types.KeyboardButton('Занятие 4 «Кровеносная и Дыхательная системы» (29.07.23)')
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton('Занятие 1')
+        btn2 = types.KeyboardButton('Занятие 2')
+        btn3 = types.KeyboardButton('Занятие 3')
+        btn4 = types.KeyboardButton('Занятие 4')
         markup.row(btn1)
         markup.row(btn2)
         markup.row(btn3)
@@ -63,48 +63,48 @@ def vcurs(message):
 
 
 def zad(message):
-    if message.text == 'Занятие 1 «Введение Анатомию» (22.07.23)':
+    if message.text == 'Занятие 1':
         markup = types.InlineKeyboardMarkup()
-        markups = types.ReplyKeyboardMarkup()
-        btn1 = types.InlineKeyboardButton('Скрипт', url='https://monkeytype.com')
+        markups = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.InlineKeyboardButton('Скрипт', callback_data='skrp1')
         btn2 = types.InlineKeyboardButton('ДЗ', callback_data='dz1')
         btn = types.KeyboardButton('Выбрать другое занятие')
         markup.row(btn1, btn2)
         markups.row(btn)
-        bot.send_message(message.chat.id, 'https://youtu.be/_1V37GKlOHE', reply_markup=markup)
+        bot.send_message(message.chat.id, f'Занятие 1 <b>«ВВЕДЕНИЕ В ЦИТОЛОГИЮ»</b> \n <i>Дата онлайн-занятия:21.07.2023</i> \n <i>Время: 10:00 мск</i> \n ( Запись появится после трансляции, а пока распечатай скрипт и насладись видосиком с Капибарами ) \n https://youtu.be/wcov8v0hrHY', reply_markup=markup)
         bot.send_message(message.chat.id, 'Смотри, учи, запоминай!', reply_markup=markups)
         bot.register_next_step_handler(message, hlp)
-    elif message.text == 'Занятие 2 «Остеология.Миология.Синдесмология» (24.07.23)':
+    elif message.text == 'Занятие 2':
         markup = types.InlineKeyboardMarkup()
-        markups = types.ReplyKeyboardMarkup()
-        btn1 = types.InlineKeyboardButton('Скрипт', url='https://monkeytype.com')
-        btn2 = types.InlineKeyboardButton('ДЗ', callback_data='dz1')
+        markups = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.InlineKeyboardButton('Скрипт', callback_data='skrp2')
+        btn2 = types.InlineKeyboardButton('ДЗ', callback_data='dz2')
         btn = types.KeyboardButton('Выбрать другое занятие')
         markup.row(btn1, btn2)
         markups.row(btn)
-        bot.send_message(message.chat.id, 'https://youtu.be/_1V37GKlOHE', reply_markup=markup)
+        bot.send_message(message.chat.id, f'Занятие 2 <b>«КЛЕТОЧНЫЙ ЦИКЛ.МИТОЗ»</b> \n <i>Дата онлайн-занятия:25.07.2023</i> \n <i>Время: 10:00 мск</i> \n ( Запись появится после трансляции, а пока распечатай скрипт и насладись видосиком с Капибарами ) \n https://youtu.be/wcov8v0hrHY', reply_markup=markup)
         bot.send_message(message.chat.id, 'Смотри, учи, запоминай!', reply_markup=markups)
         bot.register_next_step_handler(message, hlp)
-    elif message.text == 'Занятие 3 «Спланхнология» (26.07.23)':
+    elif message.text == 'Занятие 3':
         markup = types.InlineKeyboardMarkup()
-        markups = types.ReplyKeyboardMarkup()
-        btn1 = types.InlineKeyboardButton('Скрипт', url='https://monkeytype.com')
-        btn2 = types.InlineKeyboardButton('ДЗ', callback_data='dz1')
+        markups = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.InlineKeyboardButton('Скрипт', callback_data='skrp3')
+        btn2 = types.InlineKeyboardButton('ДЗ', callback_data='dz3')
         btn = types.KeyboardButton('Выбрать другое занятие')
         markup.row(btn1, btn2)
         markups.row(btn)
-        bot.send_message(message.chat.id, 'https://youtu.be/_1V37GKlOHE', reply_markup=markup)
+        bot.send_message(message.chat.id, f'Занятие 3 <b>«МЕЙОЗ.ГАМЕТОГЕНЕЗ»</b> \n <i>Дата онлайн-занятия:28.07.2023</i> \n <i>Время: 10:00 мск</i> \n ( Запись появится после трансляции, а пока распечатай скрипт и насладись видосиком с Капибарами ) \n https://youtu.be/wcov8v0hrHY', reply_markup=markup)
         bot.send_message(message.chat.id, 'Смотри, учи, запоминай!', reply_markup=markups)
         bot.register_next_step_handler(message, hlp)
-    elif message.text == 'Занятие 4 «Кровеносная и Дыхательная системы» (29.07.23)':
+    elif message.text == 'Занятие 4':
         markup = types.InlineKeyboardMarkup()
-        markups = types.ReplyKeyboardMarkup()
-        btn1 = types.InlineKeyboardButton('Скрипт', url='https://monkeytype.com')
-        btn2 = types.InlineKeyboardButton('ДЗ', callback_data='dz1')
+        markups = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.InlineKeyboardButton('Скрипт', callback_data='skrp4')
+        btn2 = types.InlineKeyboardButton('ДЗ', callback_data='dz4')
         btn = types.KeyboardButton('Выбрать другое занятие')
         markup.row(btn1, btn2)
         markups.row(btn)
-        bot.send_message(message.chat.id, 'https://youtu.be/_1V37GKlOHE', reply_markup=markup)
+        bot.send_message(message.chat.id, f'Занятие 4 <b>«ЦИКЛЫ РАСТЕНИЙ»</b> \n <i>Дата онлайн-занятия:01.08.2023</i> \n <i>Время: 10:00 мск</i> \n ( Запись появится после трансляции, а пока распечатай скрипт и насладись видосиком с Капибарами ) \n https://youtu.be/wcov8v0hrHY', reply_markup=markup)
         bot.send_message(message.chat.id, 'Смотри, учи, запоминай!', reply_markup=markups)
         bot.register_next_step_handler(message, hlp)
     else:
@@ -112,12 +112,12 @@ def zad(message):
         bot.register_next_step_handler(message, zad)
 
 def hlp(message):
-    if message.text == 'Курс 1' or message.text == 'Выбрать другое занятие':
-        markup = types.ReplyKeyboardMarkup()
-        btn1 = types.KeyboardButton('Занятие 1 «Введение Анатомию» (22.07.23)')
-        btn2 = types.KeyboardButton('Занятие 2 «Остеология.Миология.Синдесмология» (24.07.23)')
-        btn3 = types.KeyboardButton('Занятие 3 «Спланхнология» (26.07.23)')
-        btn4 = types.KeyboardButton('Занятие 4 «Кровеносная и Дыхательная системы» (29.07.23)')
+    if message.text == 'Выбрать другое занятие':
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        btn1 = types.KeyboardButton('Занятие 1')
+        btn2 = types.KeyboardButton('Занятие 2')
+        btn3 = types.KeyboardButton('Занятие 3')
+        btn4 = types.KeyboardButton('Занятие 4')
         markup.row(btn1)
         markup.row(btn2)
         markup.row(btn3)
@@ -140,18 +140,33 @@ def callback_message(callback):
         markup = types.InlineKeyboardMarkup()
         btn1 = types.InlineKeyboardButton('Отправить ДЗ на проверку', url='https://t.me/baisov_islam')
         markup.row(btn1)
-        bot.send_message(callback.message.chat.id, 'Вот ссылка на твоё домашнее задание: https://t.me/baisov_islam', reply_markup=markup)
+        bot.send_message(callback.message.chat.id, 'Вот ссылка на твоё дз:\n https://docs.google.com/forms/d/e/1FAIpQLSf-pKKI_n_VT5ivjrvWy_UetjP2aROYkML-7FecAuSMJvX3bw/viewform?usp=share_link', reply_markup=markup)
     if callback.data == 'dz2':
         markup = types.InlineKeyboardMarkup()
         btn1 = types.InlineKeyboardButton('Отправить ДЗ на проверку', url='https://t.me/baisov_islam')
         markup.row(btn1)
-        bot.send_message(callback.message.chat.id, 'Вот ссылка на твоё домашнее задание: https://t.me/baisov_islam', reply_markup=markup)
+        bot.send_message(callback.message.chat.id, '( Дз скоро появится, а пока  насладись видосиком с Капибарами): https://youtu.be/wcov8v0hrHY', reply_markup=markup)
     if callback.data == 'dz3':
         markup = types.InlineKeyboardMarkup()
         btn1 = types.InlineKeyboardButton('Отправить ДЗ на проверку', url='https://t.me/baisov_islam')
         markup.row(btn1)
-        bot.send_message(callback.message.chat.id, 'Вот ссылка на твоё домашнее задание: https://t.me/baisov_islam', reply_markup=markup)
+        bot.send_message(callback.message.chat.id, '( Дз скоро появится, а пока  насладись видосиком с Капибарами): https://youtu.be/wcov8v0hrHY', reply_markup=markup)
+    if callback.data == 'dz4':
+        markup = types.InlineKeyboardMarkup()
+        btn1 = types.InlineKeyboardButton('Отправить ДЗ на проверку', url='https://t.me/baisov_islam')
+        markup.row(btn1)
+        bot.send_message(callback.message.chat.id, '( Дз скоро появится, а пока  насладись видосиком с Капибарами): https://youtu.be/wcov8v0hrHY ', reply_markup=markup)
+    if callback.data == 'skrp1':
+        bot.send_message(callback.message.chat.id, 'Вот ссылка на скрипт:\n https://drive.google.com/file/d/1awCmoCCKm_lPLCgYOCZ_swop9AhToYl9/view?usp=share_link')
+    if callback.data == 'skrp2':
+        bot.send_message(callback.message.chat.id, '( Скрипт скоро появится, а пока  насладись видосиком с Капибарами): https://youtu.be/wcov8v0hrHY ')
+    if callback.data == 'skrp3':
+        bot.send_message(callback.message.chat.id, '( Скрипт скоро появится, а пока  насладись видосиком с Капибарами): https://youtu.be/wcov8v0hrHY ')
+    if callback.data == 'skrp4':
+        bot.send_message(callback.message.chat.id, '( Скрипт скоро появится, а пока  насладись видосиком с Капибарами): https://youtu.be/wcov8v0hrHY ')
 
+
+    
 
 @bot.message_handler(commands=['restart'])
 def restart(message):
