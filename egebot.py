@@ -30,10 +30,10 @@ def nachalo(message):
 def vcurs(message):
     if message.text == 'Мой Курс❤️':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        btn1 = types.KeyboardButton('Занятие 1 21.07.2023')
-        btn2 = types.KeyboardButton('Занятие 2 25.07.2023')
-        btn3 = types.KeyboardButton('Занятие 3 28.07.2023')
-        btn4 = types.KeyboardButton('Занятие 4 01.08.2023')
+        btn1 = types.KeyboardButton('Занятие 1 (21.07.23)')
+        btn2 = types.KeyboardButton('Занятие 2 (25.07.23)')
+        btn3 = types.KeyboardButton('Занятие 3 (28.07.23)')
+        btn4 = types.KeyboardButton('Занятие 4 (01.08.23)')
         markup.row(btn1)
         markup.row(btn2)
         markup.row(btn3)
@@ -69,7 +69,7 @@ def vcurs(message):
 
 
 def zad(message):
-    if message.text == 'Занятие 1 21.07.2023':
+    if message.text == 'Занятие 1 (21.07.23)':
         markup = types.InlineKeyboardMarkup()
         markups = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.InlineKeyboardButton('Скрипт', callback_data='skrp1')
@@ -80,7 +80,7 @@ def zad(message):
         bot.send_message(message.chat.id, f'Занятие 1 <b>«ВВЕДЕНИЕ В ЦИТОЛОГИЮ»</b> \n <i>Дата онлайн-занятия:21.07.2023</i> \n <i>Время: 10:00 мск</i> \n ( Запись появится после трансляции, а пока распечатай скрипт и насладись видосиком с Капибарами ) \n https://youtu.be/wcov8v0hrHY', reply_markup=markup, parse_mode="html")
         bot.send_message(message.chat.id, 'Смотри, учи, запоминай!', reply_markup=markups)
         bot.register_next_step_handler(message, hlp)
-    elif message.text == 'Занятие 2 25.07.2023': 
+    elif message.text == 'Занятие 2 (25.07.23)': 
         markup = types.InlineKeyboardMarkup()
         markups = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.InlineKeyboardButton('Скрипт', callback_data='skrp2')
@@ -91,7 +91,7 @@ def zad(message):
         bot.send_message(message.chat.id, f'Занятие 2 <b>«КЛЕТОЧНЫЙ ЦИКЛ.МИТОЗ»</b> \n <i>Дата онлайн-занятия:25.07.2023</i> \n <i>Время: 10:00 мск</i> \n ( Запись появится после трансляции, а пока распечатай скрипт и насладись видосиком с Капибарами ) \n https://youtu.be/wcov8v0hrHY', reply_markup=markup, parse_mode="html")
         bot.send_message(message.chat.id, 'Смотри, учи, запоминай!', reply_markup=markups)
         bot.register_next_step_handler(message, hlp)
-    elif message.text == 'Занятие 3 28.07.2023':
+    elif message.text == 'Занятие 3 (28.07.23)':
         markup = types.InlineKeyboardMarkup()
         markups = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.InlineKeyboardButton('Скрипт', callback_data='skrp3')
@@ -102,7 +102,7 @@ def zad(message):
         bot.send_message(message.chat.id, f'Занятие 3 <b>«МЕЙОЗ.ГАМЕТОГЕНЕЗ»</b> \n <i>Дата онлайн-занятия:28.07.2023</i> \n <i>Время: 10:00 мск</i> \n ( Запись появится после трансляции, а пока распечатай скрипт и насладись видосиком с Капибарами ) \n https://youtu.be/wcov8v0hrHY', reply_markup=markup, parse_mode="html")
         bot.send_message(message.chat.id, 'Смотри, учи, запоминай!', reply_markup=markups)
         bot.register_next_step_handler(message, hlp)
-    elif message.text == 'Занятие 4 01.08.2023':
+    elif message.text == 'Занятие 4 (01.08.23)':
         markup = types.InlineKeyboardMarkup()
         markups = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.InlineKeyboardButton('Скрипт', callback_data='skrp4')
@@ -126,10 +126,10 @@ def zad(message):
 def hlp(message):
     if message.text == 'Выбрать другое занятие':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        btn1 = types.KeyboardButton('Занятие 1 21.07.2023')
-        btn2 = types.KeyboardButton('Занятие 2 25.07.2023')
-        btn3 = types.KeyboardButton('Занятие 3 28.07.2023')
-        btn4 = types.KeyboardButton('Занятие 4 01.08.2023')
+        btn1 = types.KeyboardButton('Занятие 1 (21.07.23)')
+        btn2 = types.KeyboardButton('Занятие 2 (25.07.23)')
+        btn3 = types.KeyboardButton('Занятие 3 (28.07.23)')
+        btn4 = types.KeyboardButton('Занятие 4 (01.08.23)')
         markup.row(btn1)
         markup.row(btn2)
         markup.row(btn3)
