@@ -25,6 +25,12 @@ def nachalo(message):
         bot.register_next_step_handler(message, vcurs)
     elif message.text == '/restart':
         bot.register_next_step_handler(message, start)
+    elif message.text == '/link':
+        markup = types.InlineKeyboardMarkup()
+        btn1 = types.InlineKeyboardButton('Ссылка на беседу', url='https://t.me/+Dd9o9PDg-vs5ZWEy')
+        markup.row(btn1)
+        bot.send_message(message.chat.id, 'Это  чат с твоим преподавателем и однокурсниками. Ко времени онлайн занятий тут будут приходить ссылки на них. А еще тут можно что-то обсудить, поделиться впечатлениями и новостями❤️', reply_markup=markup)
+        bot.register_next_step_handler(message, nachalo)
     else:
         bot.send_message(message.chat.id, 'Не совсем понял тебя... Давай попоробуем ещё раз')
         bot.register_next_step_handler(message, nachalo)
