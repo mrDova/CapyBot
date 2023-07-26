@@ -189,7 +189,7 @@ def callback_message(callback):
     if callback.data == 'skrp1':
         bot.send_message(callback.message.chat.id, '<a href="https://drive.google.com/file/d/1awCmoCCKm_lPLCgYOCZ_swop9AhToYl9/view?usp=share_link">Вот ссылка на скрипт к занятию 1</a>:\n Обязательно распечатай скрипт перед занятием', parse_mode="html")
     if callback.data == 'skrp2':
-        bot.send_message(callback.message.chat.id, '<a href="https://drive.google.com/file/d/1oVQvwtF7gOiqsvDP93X_GwfYHOBLxXMy/view?usp=drivesdk">Вот ссылка на скрипт к занятию 2</a>:\n Обязательно распечатай скрипт перед занятием', parse_mode="html")
+        bot.send_message(callback.message.chat.id, '<a href="https://drive.google.com/file/d/1IiqTr4_yTKTHV6sJs6khDAcmaNuk4IuO/view?usp=drivesdk">Вот ссылка на скрипт к занятию 2</a>:\n Обязательно распечатай скрипт перед занятием', parse_mode="html")
     if callback.data == 'skrp3':
         bot.send_message(callback.message.chat.id, '<a href="https://drive.google.com/file/d/1f9-ofS2dkUP-wkVcQ5OeqOYx1xsR2AKa/view?usp=share_link">Вот ссылка на скрипт к занятию 3</a>:\n Обязательно распечатай скрипт перед занятием', parse_mode="html")
     if callback.data == 'skrp4':
