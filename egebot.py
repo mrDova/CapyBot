@@ -175,17 +175,17 @@ def callback_message(callback):
         markup = types.InlineKeyboardMarkup()
         btn1 = types.InlineKeyboardButton('Отправить ДЗ на проверку', url='https://t.me/baisov_islam')
         markup.row(btn1)
-        bot.send_message(callback.message.chat.id, '( Дз скоро появится, а пока  насладись видосиком с Капибарами): https://youtu.be/wcov8v0hrHY', reply_markup=markup)
+        bot.send_message(callback.message.chat.id, 'Дз  ты найдешь в скрипте \n (и не забудь отправить дз на проверку преподавателю) \n https://youtu.be/wcov8v0hrHY', reply_markup=markup)
     if callback.data == 'dz3':
         markup = types.InlineKeyboardMarkup()
         btn1 = types.InlineKeyboardButton('Отправить ДЗ на проверку', url='https://t.me/baisov_islam')
         markup.row(btn1)
-        bot.send_message(callback.message.chat.id, '( Дз скоро появится, а пока  насладись видосиком с Капибарами): https://youtu.be/wcov8v0hrHY', reply_markup=markup)
+        bot.send_message(callback.message.chat.id, 'Дз  ты найдешь в скрипте \n (и не забудь отправить дз на проверку преподавателю) \n https://youtu.be/wcov8v0hrHY', reply_markup=markup)
     if callback.data == 'dz4':
         markup = types.InlineKeyboardMarkup()
         btn1 = types.InlineKeyboardButton('Отправить ДЗ на проверку', url='https://t.me/baisov_islam')
         markup.row(btn1)
-        bot.send_message(callback.message.chat.id, '( Дз скоро появится, а пока  насладись видосиком с Капибарами): https://youtu.be/wcov8v0hrHY ', reply_markup=markup)
+        bot.send_message(callback.message.chat.id, 'Дз  ты найдешь в скрипте \n (и не забудь отправить дз на проверку преподавателю) \n https://youtu.be/wcov8v0hrHY ', reply_markup=markup)
     if callback.data == 'skrp1':
         bot.send_message(callback.message.chat.id, '<a href="https://drive.google.com/file/d/1awCmoCCKm_lPLCgYOCZ_swop9AhToYl9/view?usp=share_link">Вот ссылка на скрипт к занятию 1</a>:\n Обязательно распечатай скрипт перед занятием', parse_mode="html")
     if callback.data == 'skrp2':
