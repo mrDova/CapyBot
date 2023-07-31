@@ -109,7 +109,7 @@ def zad(message):
         btn = types.KeyboardButton('Выбрать другое занятие')
         markup.row(btn1, btn2)
         markups.row(btn)
-        bot.send_message(message.chat.id, f'Занятие 3 <b>«МЕЙОЗ.ГАМЕТОГЕНЕЗ»</b> \n <i>Дата онлайн-занятия:28.07.2023</i> \n <i>Время: 10:00 мск</i> \n ( Запись появится после трансляции, а пока распечатай скрипт и насладись видосиком с Капибарами ) \n https://youtu.be/wcov8v0hrHY', reply_markup=markup, parse_mode="html")
+        bot.send_message(message.chat.id, f'Занятие 3 <b>«МЕЙОЗ.ГАМЕТОГЕНЕЗ»</b> \n <i>Дата онлайн-занятия:28.07.2023</i> \n <i>Время: 10:00 мск</i> \n https://youtube.com/live/clBUrVJeMGs?feature=share', reply_markup=markup, parse_mode="html")
         bot.send_message(message.chat.id, 'Смотри, учи, запоминай!', reply_markup=markups)
         bot.register_next_step_handler(message, hlp)
     elif message.text == 'Занятие 4 (01.08.23)':
@@ -193,7 +193,7 @@ def callback_message(callback):
     if callback.data == 'skrp3':
         bot.send_message(callback.message.chat.id, '<a href="https://drive.google.com/file/d/1f9-ofS2dkUP-wkVcQ5OeqOYx1xsR2AKa/view?usp=share_link">Вот ссылка на скрипт к занятию 3</a>:\n Обязательно распечатай скрипт перед занятием', parse_mode="html")
     if callback.data == 'skrp4':
-        bot.send_message(callback.message.chat.id, '( Скрипт скоро появится, а пока  насладись видосиком с Капибарами): https://youtu.be/wcov8v0hrHY ')
+        bot.send_message(callback.message.chat.id, '<a href="https://drive.google.com/file/d/19uafv_A6if1cSt06olrSbjFZ-tDhoCGj/view?usp=sharing">Вот ссылка на скрипт к занятию 4</a>:\n Обязательно распечатай скрипт перед занятием', parse_mode="html")
     elif message.text == '/link':
         markup = types.InlineKeyboardMarkup()
         btn1 = types.InlineKeyboardButton('Ссылка на беседу', url='https://t.me/+modSPJz7XQMyYmQy')
