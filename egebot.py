@@ -32,7 +32,7 @@ def nachalo(message):
         bot.send_message(message.chat.id, 'Это  чат с твоим преподавателем и однокурсниками. Ко времени онлайн занятий тут будут приходить ссылки на них. А еще тут можно что-то обсудить, поделиться впечатлениями и новостями❤️', reply_markup=markup)
         bot.register_next_step_handler(message, nachalo)
     else:
-        bot.send_message(message.chat.id, 'Не совсем понял тебя... Давай попоробуем ещё раз')
+        bot.send_message(message.chat.id, 'Не совсем понял тебя... Давай попробуем ещё раз')
         bot.register_next_step_handler(message, nachalo)
 
 
@@ -72,7 +72,7 @@ def vcurs(message):
         bot.send_message(message.chat.id, 'Это  чат с твоим преподавателем и однокурсниками. Ко времени онлайн занятий тут будут приходить ссылки на них. А еще тут можно что-то обсудить, поделиться впечатлениями и новостями❤️', reply_markup=markup)
         bot.register_next_step_handler(message, vcurs)
     else:
-        bot.send_message(message.chat.id, 'Не совсем понял тебя... Давай попоробуем ещё раз')
+        bot.send_message(message.chat.id, 'Не совсем понял тебя... Давай попробуем ещё раз')
         bot.register_next_step_handler(message, vcurs)
 
 
@@ -132,7 +132,7 @@ def zad(message):
     elif message.text == '/restart':
         bot.register_next_step_handler(message, start)
     else:
-        bot.send_message(message.chat.id, 'Не совсем понял тебя... Давай попоробуем ещё раз')
+        bot.send_message(message.chat.id, 'Не совсем понял тебя... Давай попробуем ещё раз')
         bot.register_next_step_handler(message, zad)
 
 def hlp(message):
@@ -158,7 +158,7 @@ def hlp(message):
         bot.send_message(message.chat.id, 'Это  чат с твоим преподавателем и однокурсниками. Ко времени онлайн занятий тут будут приходить ссылки на них. А еще тут можно что-то обсудить, поделиться впечатлениями и новостями❤️', reply_markup=markup)
         bot.register_next_step_handler(message, hlp)
     else:
-        bot.send_message(message.chat.id, 'Не совсем понял тебя... Давай попоробуем ещё раз')
+        bot.send_message(message.chat.id, 'Не совсем понял тебя... Давай попробуем ещё раз')
         bot.register_next_step_handler(message, hlp)
 
 
